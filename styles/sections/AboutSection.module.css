@@ -1,8 +1,8 @@
 .section {
-  position: relative;
-  z-index: 0;
+  position: sticky;
+  top: 0;
   height: 100vh;
-  scroll-snap-align: start;
+  z-index: 3;
   background: #fff;
   display: grid;
   grid-template-columns: 30% 70%;

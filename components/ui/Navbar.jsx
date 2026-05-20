@@ -24,7 +24,8 @@ function getIST() {
 }
 
 export default function Navbar() {
-  const [time, setTime] = useState(getIST())
+  const [time,    setTime]    = useState(getIST())
+  const [onIntro, setOnIntro] = useState(true)   // start on VideoIntro
   const headerRef = useRef(null)
   const lastY     = useRef(0)
   const hidden    = useRef(false)
@@ -35,20 +36,22 @@ export default function Navbar() {
     return () => clearInterval(id)
   }, [])
 
-  // Auto-hide on scroll — listens on the scroll container (main)
+  // Auto-hide on scroll + detect VideoIntro section
   useEffect(() => {
     const scroller = document.querySelector('main') ?? window
+    const vh = window.innerHeight
 
     const onScroll = () => {
       const currentY = scroller.scrollTop ?? window.scrollY
       const delta    = currentY - lastY.current
 
+      // On VideoIntro: scrollTop < 1 full viewport
+      setOnIntro(currentY < vh * 0.8)
+
       if (delta > 8 && !hidden.current) {
-        // Scrolling down → hide
         gsap.to(headerRef.current, { y: '-100%', duration: 0.35, ease: 'power2.inOut' })
         hidden.current = true
       } else if (delta < -6 && hidden.current) {
-        // Scrolling up → show
         gsap.to(headerRef.current, { y: '0%', duration: 0.35, ease: 'power2.out' })
         hidden.current = false
       }
@@ -61,10 +64,10 @@ export default function Navbar() {
   }, [])
 
   return (
-    <header ref={headerRef} className={styles.header}>
+    <header ref={headerRef} className={`${styles.header} ${onIntro ? styles.introMode : ''}`}>
       <span className={styles.time}>INDIA TIME - {time}</span>
 
-      <NavigationMenu>
+      <NavigationMenu className={styles.navMenu}>
         <NavigationMenuList className="flex gap-6">
           {NAV_ITEMS.map(item => (
             <NavigationMenuItem key={item}>

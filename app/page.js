@@ -7,15 +7,28 @@ import HeroSection  from '@/components/sections/HeroSection'
 import AboutSection from '@/components/sections/AboutSection'
 
 export default function Home() {
-  const heroRef = useRef(null)
+  const heroWrapRef = useRef(null)
 
   return (
     <>
       <Navbar />
-      <main style={{ height: '100vh', overflowY: 'scroll', scrollSnapType: 'y mandatory' }}>
-        <VideoIntro   heroRef={heroRef} />
-        <HeroSection  ref={heroRef} />
-        <AboutSection />
+      {/*
+        Each wrapper is 100vh tall. The section inside is position:sticky so it
+        stays glued to the top while you scroll. Each successive section slides
+        over the previous one (increasing z-index).
+      */}
+      <main style={{ height: '100vh', overflowY: 'scroll' }}>
+        <div style={{ height: '100vh', position: 'relative' }}>
+          <VideoIntro heroRef={heroWrapRef} />
+        </div>
+
+        <div ref={heroWrapRef} style={{ height: '100vh', position: 'relative' }}>
+          <HeroSection />
+        </div>
+
+        <div style={{ height: '100vh', position: 'relative' }}>
+          <AboutSection />
+        </div>
       </main>
     </>
   )
