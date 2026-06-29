@@ -2,7 +2,7 @@
 
 A high-performance personal portfolio built with Next.js 16, GSAP, Three.js, and CSS Modules. Designed to be forked and used as your own.
 
-**Live:** [vaibhav-create.vercel.app](https://vaibhav-create.vercel.app) &nbsp;|&nbsp; **GitHub:** [VaibhavKhushalani/cinematic-portfolio](https://github.com/VaibhavKhushalani/cinematic-portfolio)
+**Live:** [vaibhav-create.vercel.app]((https://chaitanya-rosy.vercel.app)) &nbsp;|&nbsp; **GitHub:** [(https://github.com/VaibhavKhushalani/cinematic-portfolio](https://github.com/Chaitanya-FullStack/cinematic-portfolio))
 
 If this helped you, consider leaving a ⭐ on GitHub.
 
@@ -19,7 +19,7 @@ If this helped you, consider leaving a ⭐ on GitHub.
 ## Getting Started
 
 ```bash
-git clone https://github.com/VaibhavKhushalani/cinematic-portfolio.git
+git clone (https://github.com/Chaitanya-FullStack/cinematic-portfolio.git)
 cd cinematic-portfolio
 npm install
 npm run dev
@@ -90,8 +90,5 @@ vercel
 
 MIT. Free to fork, adapt, and use as your own portfolio.
 
-## Author
 
-**Vaibhav Khushalani** — Full Stack Engineer & AI Builder
 
-[GitHub](https://github.com/VaibhavKhushalani) &nbsp;|&nbsp; [LinkedIn](https://www.linkedin.com/in/vaibhav-khushalani-760217136) &nbsp;|&nbsp; [Medium](https://medium.com/@vaibhavkhushalani) &nbsp;|&nbsp; [Instagram](https://www.instagram.com/vaibhav.create) &nbsp;|&nbsp; [YouTube](https://www.youtube.com/@vaibhav.create)
