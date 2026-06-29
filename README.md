@@ -2,7 +2,7 @@
 
 A high-performance personal portfolio built with Next.js 16, GSAP, Three.js, and CSS Modules. Designed to be forked and used as your own.
 
-**Live:** [vaibhav-create.vercel.app]((https://chaitanya-rosy.vercel.app)) &nbsp;|&nbsp; **GitHub:** [(https://github.com/VaibhavKhushalani/cinematic-portfolio](https://github.com/Chaitanya-FullStack/cinematic-portfolio))
+**Live:** [vaibhav-create.vercel.app]((https://chaitanya-rosy.vercel.app)) &nbsp;|&nbsp; **GitHub:** [(https://github.com/Chaitanya-FullStack/cinematic-portfolio))
 
 If this helped you, consider leaving a ⭐ on GitHub.
 
